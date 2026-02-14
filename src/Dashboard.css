@@ -1,0 +1,380 @@
+.dashboard {
+  padding: 14px;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+.dashboard-container {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.dashboard-header {
+  margin-bottom: 28px;
+  padding-bottom: 14px;
+  border-bottom: 2px solid #e9ecef;
+}
+
+.dashboard-header h1 {
+  font-size: clamp(1.05rem, 3.5vw, 1.75rem);
+  font-weight: 700;
+  color: #212529;
+  margin-bottom: 3px;
+}
+
+.dashboard-header p {
+  font-size: clamp(0.6rem, 1.4vw, 0.7rem);
+  color: #6c757d;
+  margin: 0;
+}
+
+.dashboard-card {
+  margin-bottom: 21px;
+  border: 1px solid #dee2e6;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  transition: box-shadow 0.3s ease;
+  overflow: visible;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.dashboard-card:hover {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.dashboard-card .card-header {
+  background-color: #f8f9fa;
+  border-bottom: 2px solid #dee2e6;
+  padding: 0.875rem;
+}
+
+.dashboard-card .card-header h5 {
+  margin: 0;
+  color: #212529;
+  font-weight: 600;
+  font-size: 0.77rem;
+}
+
+.dashboard-card .card-body {
+  padding: clamp(0.525rem, 2.8vw, 1.05rem);
+}
+
+.dashboard-card .form-group {
+  margin-bottom: 1.05rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 7px;
+}
+
+.dashboard-card .form-label {
+  font-weight: 600;
+  color: #495057;
+  margin-bottom: 0.525rem;
+  font-size: clamp(0.56rem, 1.4vw, 0.665rem);
+  white-space: normal;
+  flex-shrink: 0;
+  word-break: break-word;
+}
+
+.dashboard-card .dropdown-toggle {
+  text-transform: none;
+  font-size: 0.7rem;
+  padding: 0.35rem 0.7rem;
+}
+
+.dashboard-card .accordion-header {
+  padding: 0.7rem;
+}
+
+.dashboard-card .accordion-button {
+  font-weight: 500;
+  color: #212529;
+  font-size: 0.7rem;
+}
+
+.dashboard-card .accordion-button:not(.collapsed) {
+  background-color: #e7f3ff;
+  color: #0c63e4;
+}
+
+.badge {
+  font-size: 0.595rem;
+  padding: 0.245rem 0.455rem;
+}
+
+/* Input wrapper and form styles */
+.responsive-form-group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 7px;
+}
+
+.responsive-input-wrapper {
+  position: relative;
+  flex: 2;
+  min-width: 105px;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: visible;
+}
+
+.responsive-age-input {
+  flex: 1;
+  min-width: 70px;
+  box-sizing: border-box;
+}
+
+.responsive-accordion-form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 7px;
+}
+
+.responsive-dropdown-wrapper {
+  flex: 1;
+  min-width: 140px;
+}
+
+/* Suggestions dropdown */
+.suggestions {
+  border: 1px solid #ccc;
+  position: absolute;
+  background: white;
+  z-index: 1000;
+  width: 100%;
+  top: 100%;
+  max-height: 210px;
+  overflow-y: auto;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  pointer-events: auto;
+}
+
+.suggestion-item {
+  padding: 3.5px;
+  cursor: pointer;
+  border-bottom: 1px solid #eee;
+  transition: background-color 0.2s;
+}
+
+.suggestion-item:hover {
+  background-color: #f5f5f5;
+}
+
+/* Tablet and below (768px and below) */
+@media (max-width: 768px) {
+  .dashboard {
+    padding: 10.5px;
+  }
+
+  .dashboard-card .card-body {
+    padding: 0.7rem;
+  }
+
+  .dashboard-card .card-header {
+    padding: clamp(0.525rem, 2.1vw, 0.7rem);
+  }
+
+  .responsive-form-group,
+  .responsive-accordion-form {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 5.6px;
+  }
+
+  .responsive-form-group .form-label,
+  .responsive-accordion-form .form-label {
+    margin-bottom: 0.35rem;
+  }
+
+  .responsive-input-wrapper,
+  .responsive-dropdown-wrapper,
+  .responsive-age-input {
+    width: 100%;
+    min-width: unset;
+  }
+
+  .dashboard-card .form-control {
+    width: 100%;
+    font-size: clamp(0.63rem, 1.4vw, 0.7rem);
+  }
+
+  .dashboard-card .dropdown-toggle {
+    font-size: clamp(0.595rem, 1.4vw, 0.63rem);
+    padding: 0.28rem 0.525rem;
+    width: 100%;
+  }
+
+  .goal-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.35rem;
+  }
+
+  .goal-label {
+    min-width: auto;
+    width: 100%;
+  }
+
+  .goal-row .dropdown {
+    position: static !important;
+    width: 100%;
+  }
+
+  .goal-row .dropdown-toggle {
+    width: 100%;
+  }
+}
+
+/* Small devices (576px and below) */
+@media (max-width: 576px) {
+  .dashboard {
+    padding: 7px;
+  }
+
+  .dashboard-header {
+    margin-bottom: 17.5px;
+    padding-bottom: 10.5px;
+  }
+
+  .dashboard-card {
+    margin-bottom: 14px;
+  }
+
+  .dashboard-card .card-body {
+    padding: 0.525rem;
+  }
+
+  .dashboard-card .card-header {
+    padding: 0.525rem;
+  }
+
+  .dashboard-card .card-header h5 {
+    font-size: clamp(0.63rem, 2.1vw, 0.7rem);
+  }
+
+  .dashboard-card .form-label {
+    font-size: clamp(0.525rem, 1.4vw, 0.595rem);
+  }
+
+  .dashboard-card .form-control {
+    font-size: clamp(0.595rem, 1.4vw, 0.63rem);
+  }
+
+  .dashboard-card .dropdown-toggle {
+    font-size: clamp(0.525rem, 1.4vw, 0.595rem);
+    padding: 0.245rem 0.35rem;
+  }
+
+  .dashboard-card .accordion-button {
+    font-size: clamp(0.595rem, 1.4vw, 0.63rem);
+    padding: clamp(0.35rem, 1.4vw, 0.525rem);
+  }
+
+  .dashboard-card .accordion-header {
+    padding: 0.35rem;
+  }
+
+  .badge {
+    font-size: 0.525rem;
+    padding: 0.175rem 0.35rem;
+  }
+
+  .responsive-form-group,
+  .responsive-accordion-form {
+    gap: 4.2px;
+  }
+
+  .suggestions {
+    font-size: clamp(0.56rem, 1.4vw, 0.63rem);
+  }
+
+  .suggestion-item {
+    padding: 2.8px;
+  }
+}
+
+/* Extra small devices (360px and below) */
+@media (max-width: 360px) {
+  .dashboard {
+    padding: 5.6px;
+  }
+
+  .dashboard-header {
+    margin-bottom: 14px;
+  }
+
+  .dashboard-card .card-body {
+    padding: 0.35rem;
+  }
+
+  .dashboard-card .card-header {
+    padding: 0.35rem;
+  }
+
+  .dashboard-card .form-label {
+    font-size: 0.56rem;
+  }
+
+  .dashboard-card .form-control {
+    font-size: 0.595rem;
+  }
+
+  .dashboard-card .dropdown-toggle {
+    padding: 0.21rem 0.35rem;
+    font-size: 0.56rem;
+  }
+
+  .responsive-form-group,
+  .responsive-accordion-form {
+    gap: 3.5px;
+  }
+
+  .suggestions {
+    font-size: 0.595rem;
+  }
+
+  .suggestion-item {
+    padding: 2.1px;
+  }
+}
+
+/* Grid layout to show two goals per row */
+.goals-grid {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.goal-item {
+  padding: 0.35rem;
+  border-radius: 4px;
+}
+
+@media (max-width: 768px) {
+  .goal-label {
+    min-width: 0; /* allow label to wrap on small screens */
+    word-break: break-word;
+  }
+}
+
+/* Inline layout for goal label + dropdown */
+.goal-row {
+  display: flex;
+  align-items: center;
+  gap: 0.525rem; /* space between label and dropdown */
+  margin-bottom: 0.525rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.goal-label {
+  min-width: 105px; /* adjust as needed for label width */
+  margin-bottom: 0; /* override default label spacing */
+  flex: 1;
+  min-width: 0;
+  word-break: break-word;
+}

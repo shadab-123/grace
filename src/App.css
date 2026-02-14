@@ -1,0 +1,23 @@
+.app-container {
+  padding: 20px;
+  min-height: 100vh;
+}
+
+/* Responsive padding adjustments */
+@media (max-width: 768px) {
+  .app-container {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  .app-container {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 360px) {
+  .app-container {
+    padding: 8px;
+  }
+}
